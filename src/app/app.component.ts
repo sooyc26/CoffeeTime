@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,enableProdMode } from '@angular/core';
+enableProdMode();
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coffeeTime';
+
+  money: string;
+  donations: string[] = ['1','3','5'];
+
+  constructor(){
+    this.money='0'
+  }
+  onChangeValue(ev){
+    this.money = ev.target.value;
+ }
+
 }

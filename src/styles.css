@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+body {
+    background: url('../starbucks-coffee-logo-black-and-whiteEdit.png') no-repeat center center fixed;
+    background-color: #149144;
+    overflow-x: hidden;
+    background-size: 300px 300px;
+  }
