@@ -13,8 +13,9 @@ export class AppComponent {
   donations: string[] = ['1','3','5'];
 
   constructor(){
-    this.money='0'
+    this.money;
   }
+  
   onChangeValue(ev){
     this.money = ev.target.value;
  }

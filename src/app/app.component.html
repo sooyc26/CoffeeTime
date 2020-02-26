@@ -362,8 +362,8 @@
       ${{donation}}
     </mat-radio-button>
   </mat-radio-group>
-  Or custom input<input type="text" class="form-control" placeholder="XX.XX"
-  appTwoDigitDecimaNumber name="customInput" (change)="onChangeValue($event.target.value)" [(ngModel)]='money'/>
+  Or custom input<input type="text" (change)="onChangeValue($event.target.value)" [(ngModel)]='money' 
+   name="customInput" appTwoDigitDecimalNumber/>
   <h3>donate ${{money}}</h3>
 
 
