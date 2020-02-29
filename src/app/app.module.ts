@@ -6,15 +6,19 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TwoDigitDecimalComponent } from './utility/two-digit-decimal/two-digit-decimal.component';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TwoDigitDecimalComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,7 @@ import { TwoDigitDecimalComponent } from './utility/two-digit-decimal/two-digit-
     FormsModule,
     MatIconModule,
     MatRadioModule,
+    MatInputModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     HttpClientModule

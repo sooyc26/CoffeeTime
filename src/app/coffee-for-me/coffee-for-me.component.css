@@ -1,0 +1,21 @@
+/* .example-radio-group {
+    display: flex; flex-direction: column;
+
+    margin: 15px 0;
+    margin-bottom: auto;
+    font-size: 20px;
+  } */
+
+  .example-radio-button {
+    margin:auto;
+    margin-bottom: 20%;
+  }
+  .example-full-width {
+    color: white;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }

@@ -1,0 +1,39 @@
+
+<div class="center">
+<p>coffee-for-me works!</p>
+
+<div class="content" role="main" style="color: white;">
+
+    <h2>Buy Me a Coffee!</h2>
+  
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="money">
+      <mat-radio-button class="example-radio-button" *ngFor="let donation of donations" [value]="donation">
+        ${{donation}}
+      </mat-radio-button>
+    </mat-radio-group>
+   <!-- <input matInput type="text" (change)="onChangeValue($event.target.value)" placeholder="0.00" [(ngModel)]='money' 
+     name="customInput" appTwoDigitDecimalNumber/> -->
+    <h3>donate ${{money}}</h3>
+  
+    <form class="example-form" >
+      <mat-form-field class="example-full-width" >
+        <mat-label> Or custom input</mat-label>
+        <input matInput placeholder="0.00" decimalPoints (change)="onChangeValue($event.target.value)" [(ngModel)]='money' >
+      </mat-form-field>
+  
+    </form>
+    
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_donations" />
+      <input type="hidden" name="business" value="DEY3SMZ26TKP2" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input id="donateAmount" type="hidden" name="amount" [value]="money" />
+      <input onclick="form.submit()" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+        border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    
+    </form>
+</div>
