@@ -12,12 +12,12 @@ export class CoffeeForMeComponent implements OnInit {
   donations: string[] = ['1','3','5'];
   
   constructor(){
-    this.money;
+    this.money="0.00";
   }
   
   ngOnInit(): void {
   }
-  onChangeValue(ev){
+  onChangeValue(ev: { target: { value: string; }; }){
     this.money = ev.target.value;
  }
 }
