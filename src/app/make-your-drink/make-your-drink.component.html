@@ -1,0 +1,56 @@
+<p>make-your-drink works!</p>
+
+<mat-form-field>
+    <mat-label>Drink Type</mat-label>
+    <mat-select [(value)]="drinkType">
+      <mat-option *ngFor="let drinkType of drinkTypes" [value]="drinkType.id">
+        {{drinkType.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  {{drinkType}}
+
+  <button (click)="printChange()"> check</button>
+
+  <mat-form-field *ngIf="drinkType==1">
+    <mat-label>Drink Type</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let coffee of coffeeBases" [value]="coffee">
+        {{coffee}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<!-- 
+  <mat-form-field>
+    <mat-label>Drink Type</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let drinkType of drinkTypes" [value]="drinkType">
+        {{drinkType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Drink Type</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let drinkType of drinkTypes" [value]="drinkType">
+        {{drinkType}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+
+
+
+
+<!--   
+  <h4>Basic native select</h4>
+  <mat-form-field>
+    <mat-label>Cars</mat-label>
+    <select matNativeControl required>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </mat-form-field> -->
