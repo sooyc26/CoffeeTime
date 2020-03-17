@@ -6,6 +6,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http'
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { MakeYourDrinkComponent } from './make-your-drink/make-your-drink.compon
     MatInputModule,
     MatToolbarModule,
     MatSelectModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

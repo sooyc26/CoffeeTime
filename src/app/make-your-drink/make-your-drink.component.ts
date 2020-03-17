@@ -7,16 +7,33 @@ import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 })
 export class MakeYourDrinkComponent implements OnInit  {
 
-  drinkTypes:DrinkTypes[] =[
+  drinkTypes:HardCopy[] =[
     {id:0,name:"Tea"},
     {id:1,name:"Coffee"}
   ]
-  drinkType:any;
-
+  drinkType:number;
 
   //drink base
-  teaBase:string[] =["Black","Green","Oolong","Pur'erh","White","Herbal"]
-  coffeeBases:string[] =Object.keys(CoffeeBases).filter(key => !isNaN(Number(CoffeeBases[key])));
+  //teaBase:string[] =["Black","Green","Oolong","Pur'erh","White","Herbal"]
+  teaBases:HardCopy[]=[
+    {id:0,name:"Black"},
+    {id:1,name:"Green"},
+    {id:2,name:"Oolong"},
+    {id:3,name:"Herbal"}, 
+    {id:4,name:"Pur'erh"},
+    {id:5,name:"White"} 
+  ]
+  teaBase:number;
+
+  //coffeeBases:string[] =Object.keys(CoffeeBases).filter(key => !isNaN(Number(CoffeeBases[key])));
+  coffeeBases:HardCopy[] =[
+    {id:0,name:"Arabica"},
+    {id:1,name:"Robusta"},
+    {id:2,name:"Liberica"},
+    {id:3,name:"Excelsa"}
+  ]
+  coffeeBase:number;
+
   espresso:string[]=["caffeinated","decaf"]
   shotsCount:string;
 
@@ -27,10 +44,22 @@ export class MakeYourDrinkComponent implements OnInit  {
 
   foam:string[] = ["no","light","extra"]
 
-  milk:string[]=["nonfat","2%","whole","almond","soy"]
+  //milk:string[]=["nonfat","2%","whole","almond","soy"]
+  milk:HardCopy[]=[
+    {id:0,name:"none"},
+    {id:1,name:"whole"},
+    {id:2,name:"almond"},
+    {id:3,name:"soy"},
+    {id:4,name:"2%"}  
+  ]
+  milkVal:number;
 
-  tempType:string[]=["iced","hot"]
-  
+  tempType:HardCopy[]=[
+    {id:0,name:"Iced"},
+    {id:1,name:"Hot"},
+  ]
+  temper:number;
+
   constructor() {
    }
   ngOnInit(): void {
@@ -40,26 +69,17 @@ export class MakeYourDrinkComponent implements OnInit  {
     this.drinkType = ev.target.value;
     
  }
+ selected:number[];
  printChange(){
-  console.log(this.drinkType)
+   this.selected=[this.drinkType,this.coffeeBase,this.milkVal,this.temper] 
+  console.log(this.drinkType,this.coffeeBase,this.milkVal,this.temper)
  }
-
- enumToObject(enu){
-  return Object.keys(enu).filter(
-    (type) => isNaN(<any>type) && type !== 'values'
-  );
- }
+ 
 }
 
-export class DrinkTypes{
+export class HardCopy{
   id:number;
   name:string;
 }
 
-enum CoffeeBases{
-  Arabica=0,
-  Robusta
-  ,Liberica
-  ,Excelsa
-}
 

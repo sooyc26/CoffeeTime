@@ -8,28 +8,48 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  {{drinkType}}
 
-  <!-- <button (click)="printChange()"> check</button> -->
-
+<!-- Drink BASE -->
   <mat-form-field  *ngIf="drinkType==1">
     <mat-label class="selectColor">Coffee Type</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let coffee of coffeeBases" [value]="coffee">
-        {{coffee}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-<!-- 
-  <mat-form-field>
-    <mat-label>Drink Type</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let drinkType of drinkTypes" [value]="drinkType">
-        {{drinkType}}
+    <mat-select [(value)]="coffeeBase">
+      <mat-option *ngFor="let coffee of coffeeBases" [value]="coffee.id">
+        {{coffee.name}}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
+  <mat-form-field  *ngIf="drinkType==0">
+    <mat-label class="selectColor">Tea Type</mat-label>
+    <mat-select [(value)]="teaBase">
+      <mat-option *ngFor="let tea of teaBases" [value]="tea.id">
+        {{tea.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="coffeeBase !=null || teaBase !=null">
+    <mat-label class="selectColor">Milk</mat-label>
+    <mat-select [(value)]="milkVal">
+      <mat-option *ngFor="let milkVal of milk" [value]="milkVal.id">
+        {{milkVal.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label class="selectColor">Iced or Hot</mat-label>
+    <mat-select [(value)]="temper">
+      <mat-option *ngFor="let temper of tempType" [value]="temper.id">
+        {{temper.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+    <button mat-flat-button color="primary" (click)="printChange()"> check</button>
+
+<!-- 
   <mat-form-field>
     <mat-label>Drink Type</mat-label>
     <mat-select>
@@ -39,7 +59,9 @@
     </mat-select>
   </mat-form-field> -->
 
-
+<div>
+  {{selected}}
+</div>
 
 
 
