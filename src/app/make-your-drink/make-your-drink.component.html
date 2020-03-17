@@ -1,7 +1,7 @@
 <p>make-your-drink works!</p>
 
 <mat-form-field>
-    <mat-label>Drink Type</mat-label>
+    <mat-label class="selectColor">Drink Type</mat-label>
     <mat-select [(value)]="drinkType">
       <mat-option *ngFor="let drinkType of drinkTypes" [value]="drinkType.id">
         {{drinkType.name}}
@@ -10,10 +10,10 @@
   </mat-form-field>
   {{drinkType}}
 
-  <button (click)="printChange()"> check</button>
+  <!-- <button (click)="printChange()"> check</button> -->
 
-  <mat-form-field *ngIf="drinkType==1">
-    <mat-label>Drink Type</mat-label>
+  <mat-form-field  *ngIf="drinkType==1">
+    <mat-label class="selectColor">Coffee Type</mat-label>
     <mat-select>
       <mat-option *ngFor="let coffee of coffeeBases" [value]="coffee">
         {{coffee}}
