@@ -1,0 +1,16 @@
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\CoffeeTime.deps.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\CoffeeTime.runtimeconfig.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\CoffeeTime.runtimeconfig.dev.json
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\CoffeeTime.dll
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.csprojAssemblyReference.cache
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.RazorAssemblyInfo.cache
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.RazorAssemblyInfo.cs
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.AssemblyInfoInputs.cache
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.AssemblyInfo.cs
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.RazorTargetAssemblyInfo.cache
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp2.1\CoffeeTime.pdb
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.dll
+C:\Users\sooyc\source\repos\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp2.1\CoffeeTime.pdb
