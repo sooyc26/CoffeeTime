@@ -1,11 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoffeeTime.Interfaces;
+using CoffeeTime.Models;
+using CoffeeTime.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -25,7 +29,12 @@ namespace CoffeeTime
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+          //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+          services.AddDbContextPool<AppDbContext>(
+            options => options.UseSqlServer(Configuration.GetConnectionString("EntityConnection:AppDbContext"))
+            );
+
+          services.AddScoped<IDrinkRepository, DrinkOrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +50,7 @@ namespace CoffeeTime
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc();
         }
     }
 }
