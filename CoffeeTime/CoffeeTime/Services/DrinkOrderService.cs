@@ -1,5 +1,6 @@
 using CoffeeTime.Interfaces;
 using CoffeeTime.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,8 @@ namespace CoffeeTime.Services
 
     public IEnumerable<DrinkOrder> GetDrinkOrders()
     {
-      return _appDbContext.DrinkOrders;
+      //return _appDbContext.DrinkOrders;
+      return _appDbContext.DrinkOrders.FromSqlRaw<DrinkOrder>("GetDrnkOrders");
     }
 
     public DrinkOrder Update(DrinkOrder update)

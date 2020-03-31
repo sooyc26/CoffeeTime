@@ -29,12 +29,13 @@ namespace CoffeeTime
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+      //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
           services.AddDbContextPool<AppDbContext>(
-            options => options.UseSqlServer(Configuration.GetConnectionString("EntityConnection:AppDbContext"))
+            options => options.UseSqlServer(Configuration.GetSection("EntityConnection:AppDbContext").Value)
             );
+      services.AddControllers();
 
-          services.AddScoped<IDrinkRepository, DrinkOrderService>();
+      services.AddScoped<IDrinkRepository, DrinkOrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +51,14 @@ namespace CoffeeTime
             }
 
             app.UseHttpsRedirection();
-            //app.UseMvc();
-        }
+            // app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+              endpoints.MapControllerRoute(
+                  name: "default",
+                  pattern: "{controller=DrinkOrder}/{action=DrinkOrders}/{id?}");
+            });
     }
+  }
 }
