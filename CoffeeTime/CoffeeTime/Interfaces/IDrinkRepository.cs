@@ -12,6 +12,6 @@ namespace CoffeeTime.Interfaces
     DrinkOrder AddOrder(DrinkOrder add);
     DrinkOrder Update(DrinkOrder update);
     DrinkOrder Delete(int id);
-    IEnumerable<DrinkOrder> GetDrinkOrders();
+    List<DrinkOrder> GetDrinkOrders();
   }
 }

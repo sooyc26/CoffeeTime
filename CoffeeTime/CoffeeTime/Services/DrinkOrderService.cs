@@ -40,12 +40,60 @@ namespace CoffeeTime.Services
       return _appDbContext.DrinkOrders.Find(id);
     }
 
-    public IEnumerable<DrinkOrder> GetDrinkOrders()
+    public List<DrinkOrder> GetDrinkOrders()
     {
-      //return _appDbContext.DrinkOrders;
-      return _appDbContext.DrinkOrders.FromSqlRaw<DrinkOrder>("GetDrnkOrders");
+      var resp = _appDbContext.DrinkOrders.FromSqlRaw("DrinkOrders_Select_All").ToList();
+
+      return GroupToppings(resp);
     }
 
+    private List<DrinkOrder> GroupToppings(List<DrinkOrder> ordersData)
+    {
+      var groupOrder = ordersData.GroupBy(x => new
+      {
+        x.Id,
+        x.Type,
+        x.BaseId,
+        x.Base,
+        x.SyrupId,
+        x.Syrup,
+        x.MilkId,
+        x.Milk,
+        x.IsIced,
+        x.IsDecaf,
+
+        x.ToppingId,
+        x.Topping
+      }).Select(y => new DrinkOrder
+      {
+        Id = y.Key.Id,
+        Type = y.Key.Type,
+        Base = y.Key.Base,
+        BaseId = y.Key.BaseId,
+        SyrupId = y.Key.SyrupId,
+        Syrup = y.Key.Syrup,
+        MilkId = y.Key.MilkId,
+        Milk = y.Key.Milk,
+        IsIced = y.Key.IsIced,
+        IsDecaf = y.Key.IsDecaf,
+
+        ToppingList = ordersData.GroupBy(x => new
+        {
+          x.Id,
+          x.ToppingId,
+          x.Topping
+        })
+        .Select(y => new Topping
+        {
+          Id = y.Key.ToppingId,
+          OrderId=y.Key.Id,
+          ToppingName = y.Key.Topping
+        }).ToList()
+      }).ToList();
+
+      return groupOrder;
+
+    }
     public DrinkOrder Update(DrinkOrder update)
     {
 
