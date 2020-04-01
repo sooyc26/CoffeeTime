@@ -17,6 +17,7 @@ namespace CoffeeTime.Models
     public int BaseId { get; set; }
     public string Base { get; set; }
     public int ToppingId { get; set; }
+    public int ToppingOrderId { get; set; }
     public string Topping { get; set; }
     public int SyrupId { get; set; }
     public string Syrup { get; set; }
