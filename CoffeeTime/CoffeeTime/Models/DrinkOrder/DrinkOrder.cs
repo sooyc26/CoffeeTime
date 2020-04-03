@@ -10,8 +10,8 @@ namespace CoffeeTime.Models
     public DrinkOrder()
     {
       ToppingList = new List<Topping>();
+      OrderList = new List<DrinkOrder>();
     }
-
     public int Id { get; set; }
     public int Type { get; set; }
     public int BaseId { get; set; }
@@ -26,6 +26,7 @@ namespace CoffeeTime.Models
     public bool IsIced { get; set; }
     public bool IsDecaf { get; set; }
     public List<Topping> ToppingList { get; set; }
+    public List<DrinkOrder>OrderList { get; set; }
   }
 
   public class Topping

@@ -1,7 +1,3 @@
-C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.csproj.CoreCompileInputs.cache
-C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.AssemblyInfoInputs.cache
-C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.AssemblyInfo.cs
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -114,7 +110,10 @@ C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTim
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.csprojAssemblyReference.cache
+C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.csproj.CoreCompileInputs.cache
+C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.AssemblyInfoInputs.cache
+C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.AssemblyInfo.cs
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.RazorTargetAssemblyInfo.cache
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.csproj.CopyComplete
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.dll

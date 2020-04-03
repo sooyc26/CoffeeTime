@@ -62,10 +62,6 @@ namespace CoffeeTime.Services
         x.IsIced,
         x.IsDecaf,
 
-        x.ToppingId,
-        x.Topping,
-        x.ToppingOrderId
-
       }).Select(y => new DrinkOrder
       {
         Id = y.Key.Id,
@@ -79,19 +75,23 @@ namespace CoffeeTime.Services
         IsIced = y.Key.IsIced,
         IsDecaf = y.Key.IsDecaf,
 
-        ToppingList = ordersData.GroupBy(a => new
-        {
-          a.ToppingOrderId,
-          a.ToppingId,
-          a.Topping
-        })
-        .Select(b => new Topping
-        {
-          Id = b.Key.ToppingId,
-          OrderId=b.Key.ToppingOrderId,
-          ToppingName = b.Key.Topping
-        }).Where(z => z.OrderId == y.Key.Id).ToList()
+        OrderList = y.ToList(),
+        //ToppingList = ordersData.GroupBy(a => new
+        //{
+        //  a.Id,
+        // // a.ToppingId,
+        //  //a.Topping
+        //})
+        //.Select(b => new Topping
+        //{
+        //  Id = y.Key.ToppingId,
+        //  OrderId = y.Key.Id,
+        //  ToppingName = y.Key.Topping
+        //})
+        ////.Where(a => a.OrderId == y.Key.Id)
+        //.ToList()
       }).ToList();
+      
 
       return groupOrder;
 
