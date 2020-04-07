@@ -1,3 +1,4 @@
+import { DrinkService } from './services/drink-service/drink.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio';
@@ -14,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TwoDigitDecimalComponent } from './utility/two-digit-decimal/two-digit-decimal.component';
 import {MatInputModule} from '@angular/material/input';
 import { MakeYourDrinkComponent } from './make-your-drink/make-your-drink.component';
-import { DrinkServiceComponent } from './services/drink-service/drink-service.component';
 
 
 
@@ -24,7 +24,7 @@ import { DrinkServiceComponent } from './services/drink-service/drink-service.co
     TwoDigitDecimalComponent,
     routingComponents,
     MakeYourDrinkComponent,
-    DrinkServiceComponent,
+    //DrinkService,
     
   ],
   // exports: [KeysPipe],
@@ -42,7 +42,7 @@ import { DrinkServiceComponent } from './services/drink-service/drink-service.co
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DrinkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

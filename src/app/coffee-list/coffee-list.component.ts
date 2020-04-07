@@ -1,3 +1,4 @@
+import { DrinkOrder, DrinkService } from './../services/drink-service/drink.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +14,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoffeeListComponent implements OnInit {
 
-  constructor() { }
+    orderList: any
+  constructor(service:DrinkService) { 
+    this.orderList = service.getOrders()
+    console.log(this.orderList)
+  }
 
   ngOnInit(): void {
   }
