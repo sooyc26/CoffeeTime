@@ -42,14 +42,14 @@ namespace CoffeeTime.Services
 
     public List<DrinkOrder> GetDrinkOrders()
     {
-      var resp = _appDbContext.DrinkOrders.FromSqlRaw("DrinkOrders_Select_All").ToList();
-
+      var resp = _appDbContext.DrinkOrders.FromSqlRaw("DrinkOrders_Select_All");
       return GroupToppings(resp);
     }
 
-    private List<DrinkOrder> GroupToppings(List<DrinkOrder> ordersData)
+    private List<DrinkOrder> GroupToppings(IQueryable<DrinkOrder> ordersData)
     {
-      var groupOrder = ordersData.GroupBy(x => new
+      var dataToList = ordersData.ToList();
+      var groupOrder = dataToList.GroupBy(x => new
       {
         x.Id,
         x.Type,
@@ -75,21 +75,12 @@ namespace CoffeeTime.Services
         IsIced = y.Key.IsIced,
         IsDecaf = y.Key.IsDecaf,
 
-        OrderList = y.ToList(),
-        //ToppingList = ordersData.GroupBy(a => new
-        //{
-        //  a.Id,
-        // // a.ToppingId,
-        //  //a.Topping
-        //})
-        //.Select(b => new Topping
-        //{
-        //  Id = y.Key.ToppingId,
-        //  OrderId = y.Key.Id,
-        //  ToppingName = y.Key.Topping
-        //})
-        ////.Where(a => a.OrderId == y.Key.Id)
-        //.ToList()
+        ToppingList = y.Select(k=>new Topping {
+          Id = k.ToppingId,
+          ToppingName = k.Topping,
+          OrderId = k.ToppingOrderId
+        }).ToList()
+
       }).ToList();
       
 

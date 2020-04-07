@@ -119,3 +119,4 @@ C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTim
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.dll
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.pdb
 C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.genruntimeconfig.cache
+C:\Users\sooyc\OneDrive\Documents\DotNetAppFiles\typescript\coffeeTime\CoffeeTime\CoffeeTime\obj\Debug\netcoreapp3.1\CoffeeTime.csprojAssemblyReference.cache
