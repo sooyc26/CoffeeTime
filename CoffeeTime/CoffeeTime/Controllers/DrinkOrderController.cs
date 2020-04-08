@@ -9,9 +9,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
+using Microsoft.AspNetCore.Cors;
 
 namespace CoffeeTime.Controllers
 {
+  [EnableCors("AllowMyOrigin")]
   [Route("api/[controller]")]
   [AllowAnonymous]
   [ApiController]
