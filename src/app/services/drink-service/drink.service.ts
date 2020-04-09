@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 // }
 )
 export class DrinkService {
-  drinkUrl = 'http://localhost:44352/api/drinkOrder/drinkOrders'
+  drinkUrl = 'https://localhost:44352/api/DrinkOrder/DrinkOrders'
   constructor(private _http:HttpClient) { }
 
   getOrders():Observable<IDrinkOrder[]>{

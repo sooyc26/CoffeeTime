@@ -65,6 +65,9 @@ namespace CoffeeTime
       app.UseHttpsRedirection();
       // app.UseMvc();
       app.UseRouting();
+
+      app.UseCors(MyAllowSpecificOrigins);
+
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllerRoute(
@@ -72,7 +75,6 @@ namespace CoffeeTime
             pattern: "{controller=DrinkOrder}/{action=DrinkOrders}/{id?}");
       });
 
-      app.UseCors(MyAllowSpecificOrigins);
 
     }
   }
