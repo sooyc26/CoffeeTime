@@ -26,7 +26,6 @@ export class CoffeeListComponent implements OnInit {
         this.orderList = data
         console.log(data)
     });
-    console.log("ch")
   }
 
 }

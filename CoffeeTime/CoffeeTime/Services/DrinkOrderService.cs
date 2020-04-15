@@ -42,13 +42,15 @@ namespace CoffeeTime.Services
 
     public List<DrinkOrder> GetDrinkOrders()
     {
-      var resp = _appDbContext.DrinkOrders.FromSqlRaw("DrinkOrders_Select_All");
+      var resp = _appDbContext.DrinkOrders.FromSqlRaw("EXECUTE dbo.DrinkOrders_Select_All").ToList();
       return GroupToppings(resp);
     }
 
-    private List<DrinkOrder> GroupToppings(IQueryable<DrinkOrder> ordersData)
+    private List<DrinkOrder> GroupToppings(List<DrinkOrder> ordersData)
     {
-      var dataToList = ordersData.ToList();
+      //var dataToList = ordersData.ToList();
+      var dataToList = new List<DrinkOrder>(ordersData);
+      //var check = ordersData.Select(x => x.ToppingOrderId).ToList();
       var groupOrder = dataToList.GroupBy(x => new
       {
         x.Id,

@@ -6,8 +6,28 @@
   <h3>Ice Coffee</h3>
 
 
-  <!-- <ul>
+  <ul>
     <li *ngFor="let server of orderList">
-        {{server.toppingName}}
+        {{server.id}},
+        {{server.type}},
+        {{server.baseId}},
+        {{server.toppingId}},
+        {{server.toppingOrderId}},
+        {{server.topping}},
+        {{server.syrupId}},
+        {{server.syrup}},
+        {{server.milkId}},
+        {{server.milk}},
+        {{server.isIced}},
+        {{server.isDecaf}},
+        <ul>
+          <li *ngFor="let topping of server.toppingList">
+            {{topping.id}}
+            {{topping.orderId}}
+            {{topping.toppingName}}
+
+          </li>
+        </ul>
+
     </li>
-</ul> -->
+</ul>
