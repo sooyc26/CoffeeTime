@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace CoffeeTime.Services
@@ -42,15 +43,13 @@ namespace CoffeeTime.Services
 
     public List<DrinkOrder> GetDrinkOrders()
     {
-      var resp = _appDbContext.DrinkOrders.FromSqlRaw("EXECUTE dbo.DrinkOrders_Select_All").ToList();
+      var resp = _appDbContext.DrinkOrders.FromSqlRaw("EXECUTE dbo.DrinkOrders_Select_All").AsNoTracking();
       return GroupToppings(resp);
     }
 
-    private List<DrinkOrder> GroupToppings(List<DrinkOrder> ordersData)
+    private List<DrinkOrder> GroupToppings(IQueryable<DrinkOrder> ordersData)
     {
-      //var dataToList = ordersData.ToList();
-      var dataToList = new List<DrinkOrder>(ordersData);
-      //var check = ordersData.Select(x => x.ToppingOrderId).ToList();
+      var dataToList = ordersData.ToList();
       var groupOrder = dataToList.GroupBy(x => new
       {
         x.Id,
