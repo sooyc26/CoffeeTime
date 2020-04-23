@@ -14,6 +14,7 @@ namespace CoffeeTime.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            //test branch from master
             return new string[] { "value1", "value3" };
         }
 
